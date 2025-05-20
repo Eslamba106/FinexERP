@@ -15,4 +15,12 @@ class FloorManagement extends Model
     public function property_floor_management(){
         return $this->belongsTo(PropertyManagement::class,"property_management_id","id");
     }
+    public function block_floor_management(){
+        return $this->belongsTo(BlockManagement::class,"block_management_id","id");
+    }
+    public function floor_management_main(){
+        return $this->belongsTo(Floor::class,"floor_id","id");
+    }
+
+    
 }

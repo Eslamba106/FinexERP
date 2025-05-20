@@ -58,3 +58,9 @@ if (!function_exists('get_settings')) {
             return $config;
         }
 }
+if (!function_exists('main_path')) {
+    function main_path()
+    {
+        return 'public/assets/';
+    }
+}

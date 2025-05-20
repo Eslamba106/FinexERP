@@ -7,6 +7,43 @@
     <!-- Custom styles for this page -->
     <link href="{{ asset('public/assets/back-end') }}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="{{ asset('public/assets/back-end/css/croppie.css') }}" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .floor-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .floor-item {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5dc;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .floor-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .floor-item:hover {
+            background-color: #e0e0d1;
+        }
+
+        .floor-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
 @endpush
 
 @section('content')
@@ -113,15 +150,75 @@
                     </div>
 
                     @if (count($main) == 0)
-                        <div class="text-center p-4">
-                            <img class="mb-3 w-160" src="{{ asset('public/assets/back-end') }}/svg/illustrations/sorry.svg"
-                                alt="Image Description">
-                            <p class="mb-0">{{ __('general.no_data_to_show') }}</p>
-                        </div>
+                            <div class="text-center p-4">
+                                <img class="mb-3 w-160" src="{{ asset('public/assets/back-end') }}/svg/illustrations/sorry.svg"
+                                    alt="Image Description">
+                                <p class="mb-0">{{ __('general.no_data_to_show') }}</p>
+                            </div>
                     @endif
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="floor-title">Floor</div>
+    <div class="floor-container">
+        <label class="floor-item">
+            <input type="checkbox" value="FLR001" checked>
+            FLR001
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="FLR002" checked>
+            FLR002
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="FLR003">
+            FLR003
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="FLR004">
+            FLR004
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="FLR005">
+            FLR005
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="FLR006">
+            FLR006
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="FLR007">
+            FLR007
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="FLR008">
+            FLR008
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="FLR009">
+            FLR009
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="FLR010">
+            FLR010
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="Ground Floor">
+            Ground Floor
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="Mezzanine Floor">
+            Mezzanine Floor
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="Parking Area">
+            Parking Area
+        </label>
+        <label class="floor-item">
+            <input type="checkbox" value="Roof">
+            Roof
+        </label>
     </div>
     {{-- <input type="hidden" id="route_name" name="route_name" value="{{ $route }}" > --}}
 @endsection

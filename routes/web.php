@@ -287,6 +287,9 @@ Route::group(['prefix'=> 'floor_management'], function () {
     Route::get('/view_image/{id}', [FloorManagementController::class,'view_image'])->name('floor_management.show');
     Route::patch('/update/{id}', [FloorManagementController::class,'update'])->name('floor_management.update');
     Route::get('delete', [FloorManagementController::class, 'delete'])->name('floor_management.delete');
+    Route::get('get_blocks_by_property_id/{id}', [FloorManagementController::class, 'get_blocks_by_property_id'])->name('floor_management.get_blocks_by_property_id');
+
+    Route::post('status-update', [FloorManagementController::class, 'statusUpdate'])->name('floor_management.status-update');
 });
 ################################################## End Propert Management ############################################# 
 

@@ -12,4 +12,7 @@ class PropertyManagement extends Model
     public function ownership(){
         return $this->belongsTo(Ownership::class,"ownership_id","id");
     }
+    public function blocks_management_child(){
+        return $this->hasMany(BlockManagement::class,"property_management_id","id");
+    }
 }

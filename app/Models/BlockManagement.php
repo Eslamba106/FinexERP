@@ -15,4 +15,5 @@ class BlockManagement extends Model
     public function property_block_management(){
         return $this->belongsTo(PropertyManagement::class,"property_management_id","id");
     }
+    
 }
